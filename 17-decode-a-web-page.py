@@ -8,9 +8,9 @@ r = requests.get(url)
 soup = bs.BeautifulSoup(r.text, 'html.parser')
 
 
-for tag in soup.find_all('article', {"class" : "story"}) :
+for tag in soup.find_all('article', {"class" : "story theme-summary"}) :
     #print (tag)
     n = tag.findNext('h2', {"class" : "story-heading"})
     #print (n)
-    print (n.findNext('a').text)
+    print (n.findNext('a').text.strip())
     #print ("============================================================================")
