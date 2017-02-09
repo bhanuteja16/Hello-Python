@@ -14,7 +14,6 @@ def check_col(lst) :
             ls.append(lst[i][j])
         if(all(x == ls[0] for x in ls)) :
             return (True, ls[0])
-    pass
 
 def check_dia(lst) :
     pass
@@ -24,7 +23,7 @@ lst1 = list(input("Enter the first row elements: "))
 lst2 = list(input("Enter the second row elements: "))
 lst3 = list(input("Enter the third row elements: "))
 lst = [lst1, lst2, lst3]
-a, b = check_rows(lst)
+a, b = check_col(lst)
 print (a, b)
 
 
